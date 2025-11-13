@@ -1,0 +1,29 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+
+# Environment variables / secrets
+.env
+.env.*
+
+# Streamlit artifacts
+.streamlit/
+
+# Local datasets and vector stores
+vector_db/
+vector_db_v2/
+*.sqlite3
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+

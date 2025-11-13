@@ -1,0 +1,494 @@
+{
+    "search_metadata": {
+      "id": "69097a65054e5f89f9b56679",
+      "status": "Success",
+      "json_endpoint": "https://serpapi.com/searches/16d45044f24bd752/69097a65054e5f89f9b56679.json",
+      "created_at": "2025-11-04 04:00:37 UTC",
+      "processed_at": "2025-11-04 04:00:37 UTC",
+      "google_scholar_url": "https://scholar.google.com/scholar?q=%22Jamuna+S+Murthy%22&hl=en",
+      "raw_html_file": "https://serpapi.com/searches/16d45044f24bd752/69097a65054e5f89f9b56679.html",
+      "total_time_taken": 1.12
+    },
+    "search_parameters": {
+      "engine": "google_scholar",
+      "q": "\"Jamuna S Murthy\"",
+      "hl": "en"
+    },
+    "search_information": {
+      "organic_results_state": "Results for exact spelling",
+      "total_results": 49,
+      "time_taken_displayed": 0.07,
+      "query_displayed": "\"Jamuna S Murthy\""
+    },
+    "profiles": {
+      "title": "User profiles for \"Jamuna S Murthy\"",
+      "link": "https://scholar.google.com/citations?view_op=search_authors&mauthors=%22Jamuna+S+Murthy%22&hl=en&oi=ao",
+      "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en&mauthors=%22Jamuna+S+Murthy%22",
+      "authors": [
+        {
+          "name": "Jamuna S Murthy",
+          "link": "https://scholar.google.com/citations?user=DIJx__kAAAAJ&hl=en&oi=ao",
+          "serpapi_link": "https://serpapi.com/search.json?author_id=DIJx__kAAAAJ&engine=google_scholar_author&hl=en",
+          "author_id": "DIJx__kAAAAJ",
+          "affiliations": "Ramaiah Institute of Technology",
+          "email": "Verified email at msrit.edu",
+          "cited_by": 269
+        }
+      ]
+    },
+    "organic_results": [
+      {
+        "position": 1,
+        "title": "ObjectDetect: A Real‐Time Object Detection Framework for Advanced Driver Assistant Systems Using YOLOv5",
+        "result_id": "L9weclTS-0QJ",
+        "link": "https://onlinelibrary.wiley.com/doi/abs/10.1155/2022/9444360",
+        "snippet": "In the recent times, there has been a lot of speculation related to advanced driver‐assistance system (ADAS) which provides best driving experience for the drivers. ADAS technology …",
+        "publication_info": {
+          "summary": "JS Murthy, GM Siddesh, WC Lai… - Wireless …, 2022 - Wiley Online Library",
+          "authors": [
+            {
+              "name": "JS Murthy",
+              "link": "https://scholar.google.com/citations?user=DIJx__kAAAAJ&hl=en&oi=sra",
+              "author_id": "DIJx__kAAAAJ",
+              "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=DIJx__kAAAAJ&engine=google_scholar_author&hl=en"
+            },
+            {
+              "name": "GM Siddesh"
+            },
+            {
+              "name": "WC Lai",
+              "link": "https://scholar.google.com/citations?user=2yVbZ7wAAAAJ&hl=en&oi=sra",
+              "author_id": "2yVbZ7wAAAAJ",
+              "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=2yVbZ7wAAAAJ&engine=google_scholar_author&hl=en"
+            }
+          ]
+        },
+        "resources": [
+          {
+            "title": "wiley.com",
+            "file_format": "PDF",
+            "link": "https://onlinelibrary.wiley.com/doi/pdf/10.1155/2022/9444360"
+          },
+          {
+            "title": "Full View",
+            "link": "https://scholar.google.com/scholar?output=instlink&q=info:L9weclTS-0QJ:scholar.google.com/&hl=en&as_sdt=0,34&scillfp=15862898625475125955&oi=lle"
+          }
+        ],
+        "inline_links": {
+          "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=L9weclTS-0QJ",
+          "cited_by": {
+            "total": 109,
+            "link": "https://scholar.google.com/scholar?cites=4970797873867185199&as_sdt=5,34&sciodt=0,34&hl=en",
+            "cites_id": "4970797873867185199",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=4970797873867185199&engine=google_scholar&hl=en"
+          },
+          "related_pages_link": "https://scholar.google.com/scholar?q=related:L9weclTS-0QJ:scholar.google.com/&scioq=%22Jamuna+S+Murthy%22&hl=en&as_sdt=0,34",
+          "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C34&engine=google_scholar&hl=en&q=related%3AL9weclTS-0QJ%3Ascholar.google.com%2F",
+          "versions": {
+            "total": 5,
+            "link": "https://scholar.google.com/scholar?cluster=4970797873867185199&hl=en&as_sdt=0,34",
+            "cluster_id": "4970797873867185199",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C34&cluster=4970797873867185199&engine=google_scholar&hl=en"
+          }
+        }
+      },
+      {
+        "position": 2,
+        "title": "A smart video analytical framework for sarcasm detection using novel adaptive fusion network and SarcasNet-99 model",
+        "result_id": "sA7w3o5ZyicJ",
+        "link": "https://link.springer.com/article/10.1007/s00371-023-03224-y",
+        "snippet": "Sarcasm is often related to something that has created a mass confusion among the general uninformed public. It is always associated with a mockery tone or trenchancy facial …",
+        "publication_info": {
+          "summary": "JS Murthy, GM Siddesh - The Visual Computer, 2024 - Springer",
+          "authors": [
+            {
+              "name": "JS Murthy",
+              "link": "https://scholar.google.com/citations?user=DIJx__kAAAAJ&hl=en&oi=sra",
+              "author_id": "DIJx__kAAAAJ",
+              "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=DIJx__kAAAAJ&engine=google_scholar_author&hl=en"
+            },
+            {
+              "name": "GM Siddesh"
+            }
+          ]
+        },
+        "inline_links": {
+          "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=sA7w3o5ZyicJ",
+          "cited_by": {
+            "total": 14,
+            "link": "https://scholar.google.com/scholar?cites=2867202582935244464&as_sdt=5,34&sciodt=0,34&hl=en",
+            "cites_id": "2867202582935244464",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=2867202582935244464&engine=google_scholar&hl=en"
+          },
+          "related_pages_link": "https://scholar.google.com/scholar?q=related:sA7w3o5ZyicJ:scholar.google.com/&scioq=%22Jamuna+S+Murthy%22&hl=en&as_sdt=0,34",
+          "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C34&engine=google_scholar&hl=en&q=related%3AsA7w3o5ZyicJ%3Ascholar.google.com%2F",
+          "versions": {
+            "total": 2,
+            "link": "https://scholar.google.com/scholar?cluster=2867202582935244464&hl=en&as_sdt=0,34",
+            "cluster_id": "2867202582935244464",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C34&cluster=2867202582935244464&engine=google_scholar&hl=en"
+          }
+        }
+      },
+      {
+        "position": 3,
+        "title": "AI Based Criminal Detection and Recognition System for Public Safety and Security using novel CriminalNet-228",
+        "result_id": "ec95lO73jX0J",
+        "link": "https://link.springer.com/chapter/10.1007/978-981-97-2611-0_1",
+        "snippet": "The recent surge in public space criminal activities underscores the need for an efficient system to promptly detect, recognize, and track criminals. Existing AI-based criminal detection …",
+        "publication_info": {
+          "summary": "JS Murthy, GM Siddesh - … Conference on Frontiers in Computing and …, 2023 - Springer",
+          "authors": [
+            {
+              "name": "JS Murthy",
+              "link": "https://scholar.google.com/citations?user=DIJx__kAAAAJ&hl=en&oi=sra",
+              "author_id": "DIJx__kAAAAJ",
+              "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=DIJx__kAAAAJ&engine=google_scholar_author&hl=en"
+            },
+            {
+              "name": "GM Siddesh"
+            }
+          ]
+        },
+        "inline_links": {
+          "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=ec95lO73jX0J",
+          "cited_by": {
+            "total": 9,
+            "link": "https://scholar.google.com/scholar?cites=9047159830522482553&as_sdt=5,34&sciodt=0,34&hl=en",
+            "cites_id": "9047159830522482553",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=9047159830522482553&engine=google_scholar&hl=en"
+          },
+          "related_pages_link": "https://scholar.google.com/scholar?q=related:ec95lO73jX0J:scholar.google.com/&scioq=%22Jamuna+S+Murthy%22&hl=en&as_sdt=0,34",
+          "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C34&engine=google_scholar&hl=en&q=related%3Aec95lO73jX0J%3Ascholar.google.com%2F",
+          "versions": {
+            "total": 2,
+            "link": "https://scholar.google.com/scholar?cluster=9047159830522482553&hl=en&as_sdt=0,34",
+            "cluster_id": "9047159830522482553",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C34&cluster=9047159830522482553&engine=google_scholar&hl=en"
+          }
+        }
+      },
+      {
+        "position": 4,
+        "title": "A real-time twitter trend analysis and visualization framework",
+        "result_id": "K8iSxBsM2OcJ",
+        "link": "https://www.igi-global.com/article/a-real-time-twitter-trend-analysis-and-visualization-framework/223106",
+        "snippet": "Trend analysis over Twitter offers organizations a fast and effective way of predicting the future trends. In the recent years, a wide range of indicators and methods were used for …",
+        "publication_info": {
+          "summary": "JS Murthy, GM Siddesh, KG Srinivasa - International Journal on …, 2019 - igi-global.com",
+          "authors": [
+            {
+              "name": "JS Murthy",
+              "link": "https://scholar.google.com/citations?user=DIJx__kAAAAJ&hl=en&oi=sra",
+              "author_id": "DIJx__kAAAAJ",
+              "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=DIJx__kAAAAJ&engine=google_scholar_author&hl=en"
+            },
+            {
+              "name": "GM Siddesh"
+            },
+            {
+              "name": "KG Srinivasa",
+              "link": "https://scholar.google.com/citations?user=yV7dYSQAAAAJ&hl=en&oi=sra",
+              "author_id": "yV7dYSQAAAAJ",
+              "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=yV7dYSQAAAAJ&engine=google_scholar_author&hl=en"
+            }
+          ]
+        },
+        "resources": [
+          {
+            "title": "academia.edu",
+            "file_format": "PDF",
+            "link": "https://www.academia.edu/download/93497525/IJSWIS.201904010120221102-1-1v519hm.pdf"
+          }
+        ],
+        "inline_links": {
+          "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=K8iSxBsM2OcJ",
+          "cited_by": {
+            "total": 18,
+            "link": "https://scholar.google.com/scholar?cites=16706116131132459051&as_sdt=5,34&sciodt=0,34&hl=en",
+            "cites_id": "16706116131132459051",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=16706116131132459051&engine=google_scholar&hl=en"
+          },
+          "related_pages_link": "https://scholar.google.com/scholar?q=related:K8iSxBsM2OcJ:scholar.google.com/&scioq=%22Jamuna+S+Murthy%22&hl=en&as_sdt=0,34",
+          "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C34&engine=google_scholar&hl=en&q=related%3AK8iSxBsM2OcJ%3Ascholar.google.com%2F",
+          "versions": {
+            "total": 8,
+            "link": "https://scholar.google.com/scholar?cluster=16706116131132459051&hl=en&as_sdt=0,34",
+            "cluster_id": "16706116131132459051",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C34&cluster=16706116131132459051&engine=google_scholar&hl=en"
+          }
+        }
+      },
+      {
+        "position": 5,
+        "title": "Cloud Security: Concepts, Applications and Practices",
+        "result_id": "Ht8l6syDNqoJ",
+        "type": "Book",
+        "link": "https://books.google.com/books?hl=en&lr=&id=T84UEQAAQBAJ&oi=fnd&pg=PT7&dq=%22Jamuna+S+Murthy%22&ots=8Fk9M82afR&sig=B6wfZVsysN8MtXJ37M7yV9IbhL0",
+        "snippet": "This comprehensive work surveys the challenges, the best practices in the industry, and the latest developments and technologies. It covers the fundamentals of cloud computing, …",
+        "publication_info": {
+          "summary": "JS Murthy, GM Siddesh, KG Srinivasa - 2024 - books.google.com",
+          "authors": [
+            {
+              "name": "JS Murthy",
+              "link": "https://scholar.google.com/citations?user=DIJx__kAAAAJ&hl=en&oi=sra",
+              "author_id": "DIJx__kAAAAJ",
+              "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=DIJx__kAAAAJ&engine=google_scholar_author&hl=en"
+            },
+            {
+              "name": "GM Siddesh"
+            },
+            {
+              "name": "KG Srinivasa",
+              "link": "https://scholar.google.com/citations?user=yV7dYSQAAAAJ&hl=en&oi=sra",
+              "author_id": "yV7dYSQAAAAJ",
+              "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=yV7dYSQAAAAJ&engine=google_scholar_author&hl=en"
+            }
+          ]
+        },
+        "inline_links": {
+          "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=Ht8l6syDNqoJ",
+          "cited_by": {
+            "total": 11,
+            "link": "https://scholar.google.com/scholar?cites=12265135551315042078&as_sdt=5,34&sciodt=0,34&hl=en",
+            "cites_id": "12265135551315042078",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=12265135551315042078&engine=google_scholar&hl=en"
+          },
+          "related_pages_link": "https://scholar.google.com/scholar?q=related:Ht8l6syDNqoJ:scholar.google.com/&scioq=%22Jamuna+S+Murthy%22&hl=en&as_sdt=0,34",
+          "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C34&engine=google_scholar&hl=en&q=related%3AHt8l6syDNqoJ%3Ascholar.google.com%2F"
+        }
+      },
+      {
+        "position": 6,
+        "title": "A real-time quantum-conscious multimodal option mining framework using deep learning",
+        "result_id": "z7pDJ1a6qNMJ",
+        "link": "https://search.proquest.com/openview/a607c8361a7aac70876d8e1fe6d0e205/1?pq-origsite=gscholar&cbl=1686339",
+        "snippet": "Option mining is an arising yet testing artificial intelligence function. It aims at finding the emotional states and enthusiastic substitutes of expounders associated with a discussion based …",
+        "publication_info": {
+          "summary": "JS Murthy, SG Matt, SKH Venkatesh… - … International Journal of …, 2022 - search.proquest.com",
+          "authors": [
+            {
+              "name": "JS Murthy",
+              "link": "https://scholar.google.com/citations?user=DIJx__kAAAAJ&hl=en&oi=sra",
+              "author_id": "DIJx__kAAAAJ",
+              "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=DIJx__kAAAAJ&engine=google_scholar_author&hl=en"
+            },
+            {
+              "name": "SG Matt"
+            },
+            {
+              "name": "SKH Venkatesh",
+              "link": "https://scholar.google.com/citations?user=iHdqblAAAAAJ&hl=en&oi=sra",
+              "author_id": "iHdqblAAAAAJ",
+              "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=iHdqblAAAAAJ&engine=google_scholar_author&hl=en"
+            }
+          ]
+        },
+        "inline_links": {
+          "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=z7pDJ1a6qNMJ",
+          "cited_by": {
+            "total": 11,
+            "link": "https://scholar.google.com/scholar?cites=15251645017278888655&as_sdt=5,34&sciodt=0,34&hl=en",
+            "cites_id": "15251645017278888655",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=15251645017278888655&engine=google_scholar&hl=en"
+          },
+          "related_pages_link": "https://scholar.google.com/scholar?q=related:z7pDJ1a6qNMJ:scholar.google.com/&scioq=%22Jamuna+S+Murthy%22&hl=en&as_sdt=0,34",
+          "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C34&engine=google_scholar&hl=en&q=related%3Az7pDJ1a6qNMJ%3Ascholar.google.com%2F",
+          "versions": {
+            "total": 2,
+            "link": "https://scholar.google.com/scholar?cluster=15251645017278888655&hl=en&as_sdt=0,34",
+            "cluster_id": "15251645017278888655",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C34&cluster=15251645017278888655&engine=google_scholar&hl=en"
+          }
+        }
+      },
+      {
+        "position": 7,
+        "title": "A Real-Time Framework for Automatic Sarcasm Detection Using Proposed Tensor-DNN-50 Algorithm",
+        "result_id": "OXdfvVcYrRUJ",
+        "link": "https://link.springer.com/chapter/10.1007/978-981-97-2611-0_8",
+        "snippet": "Social media platforms such as Twitter, Facebook, and Instagram are vast repositories of trending global news. They generate an enormous amount of data, offering a valuable resource …",
+        "publication_info": {
+          "summary": "JS Murthy, GM Siddesh - … Conference on Frontiers in Computing and …, 2023 - Springer",
+          "authors": [
+            {
+              "name": "JS Murthy",
+              "link": "https://scholar.google.com/citations?user=DIJx__kAAAAJ&hl=en&oi=sra",
+              "author_id": "DIJx__kAAAAJ",
+              "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=DIJx__kAAAAJ&engine=google_scholar_author&hl=en"
+            },
+            {
+              "name": "GM Siddesh"
+            }
+          ]
+        },
+        "inline_links": {
+          "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=OXdfvVcYrRUJ",
+          "cited_by": {
+            "total": 9,
+            "link": "https://scholar.google.com/scholar?cites=1561931410885801785&as_sdt=5,34&sciodt=0,34&hl=en",
+            "cites_id": "1561931410885801785",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=1561931410885801785&engine=google_scholar&hl=en"
+          },
+          "related_pages_link": "https://scholar.google.com/scholar?q=related:OXdfvVcYrRUJ:scholar.google.com/&scioq=%22Jamuna+S+Murthy%22&hl=en&as_sdt=0,34",
+          "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C34&engine=google_scholar&hl=en&q=related%3AOXdfvVcYrRUJ%3Ascholar.google.com%2F",
+          "versions": {
+            "total": 3,
+            "link": "https://scholar.google.com/scholar?cluster=1561931410885801785&hl=en&as_sdt=0,34",
+            "cluster_id": "1561931410885801785",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C34&cluster=1561931410885801785&engine=google_scholar&hl=en"
+          }
+        }
+      },
+      {
+        "position": 8,
+        "title": "A real-time video surveillance-based framework for early plant disease detection using jetson tx1 and novel leafnet-104 algorithm",
+        "result_id": "3d4qnXZJuWwJ",
+        "link": "https://link.springer.com/chapter/10.1007/978-981-97-2614-1_23",
+        "snippet": "The precise and timely identification of plant diseases plays a pivotal role in safeguarding crop health and optimizing agricultural yields. This paper introduces an innovative framework …",
+        "publication_info": {
+          "summary": "JS Murthy, K Dhanashekar, GM Siddesh - International Conference on …, 2023 - Springer",
+          "authors": [
+            {
+              "name": "JS Murthy",
+              "link": "https://scholar.google.com/citations?user=DIJx__kAAAAJ&hl=en&oi=sra",
+              "author_id": "DIJx__kAAAAJ",
+              "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=DIJx__kAAAAJ&engine=google_scholar_author&hl=en"
+            },
+            {
+              "name": "K Dhanashekar",
+              "link": "https://scholar.google.com/citations?user=IOf4rlAAAAAJ&hl=en&oi=sra",
+              "author_id": "IOf4rlAAAAAJ",
+              "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=IOf4rlAAAAAJ&engine=google_scholar_author&hl=en"
+            },
+            {
+              "name": "GM Siddesh"
+            }
+          ]
+        },
+        "inline_links": {
+          "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=3d4qnXZJuWwJ",
+          "cited_by": {
+            "total": 8,
+            "link": "https://scholar.google.com/scholar?cites=7834373800579489501&as_sdt=5,34&sciodt=0,34&hl=en",
+            "cites_id": "7834373800579489501",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=7834373800579489501&engine=google_scholar&hl=en"
+          },
+          "related_pages_link": "https://scholar.google.com/scholar?q=related:3d4qnXZJuWwJ:scholar.google.com/&scioq=%22Jamuna+S+Murthy%22&hl=en&as_sdt=0,34",
+          "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C34&engine=google_scholar&hl=en&q=related%3A3d4qnXZJuWwJ%3Ascholar.google.com%2F",
+          "versions": {
+            "total": 3,
+            "link": "https://scholar.google.com/scholar?cluster=7834373800579489501&hl=en&as_sdt=0,34",
+            "cluster_id": "7834373800579489501",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C34&cluster=7834373800579489501&engine=google_scholar&hl=en"
+          }
+        }
+      },
+      {
+        "position": 9,
+        "title": "TwitSenti: a real-time Twitter sentiment analysis and visualization framework",
+        "result_id": "kY-9Cy-emsQJ",
+        "link": "https://www.worldscientific.com/doi/abs/10.1142/S0219649219500138",
+        "snippet": "Twitter is considered as one of the world’s largest social networking sites which allow users to customize their public profile, connect with others and interact with connected users. The …",
+        "publication_info": {
+          "summary": "JS Murthy, GM Siddesh, KG Srinivasa - Journal of Information & …, 2019 - World Scientific",
+          "authors": [
+            {
+              "name": "JS Murthy",
+              "link": "https://scholar.google.com/citations?user=DIJx__kAAAAJ&hl=en&oi=sra",
+              "author_id": "DIJx__kAAAAJ",
+              "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=DIJx__kAAAAJ&engine=google_scholar_author&hl=en"
+            },
+            {
+              "name": "GM Siddesh"
+            },
+            {
+              "name": "KG Srinivasa",
+              "link": "https://scholar.google.com/citations?user=yV7dYSQAAAAJ&hl=en&oi=sra",
+              "author_id": "yV7dYSQAAAAJ",
+              "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=yV7dYSQAAAAJ&engine=google_scholar_author&hl=en"
+            }
+          ]
+        },
+        "inline_links": {
+          "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=kY-9Cy-emsQJ",
+          "cited_by": {
+            "total": 16,
+            "link": "https://scholar.google.com/scholar?cites=14166809502744940433&as_sdt=5,34&sciodt=0,34&hl=en",
+            "cites_id": "14166809502744940433",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=14166809502744940433&engine=google_scholar&hl=en"
+          },
+          "related_pages_link": "https://scholar.google.com/scholar?q=related:kY-9Cy-emsQJ:scholar.google.com/&scioq=%22Jamuna+S+Murthy%22&hl=en&as_sdt=0,34",
+          "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C34&engine=google_scholar&hl=en&q=related%3AkY-9Cy-emsQJ%3Ascholar.google.com%2F",
+          "versions": {
+            "total": 4,
+            "link": "https://scholar.google.com/scholar?cluster=14166809502744940433&hl=en&as_sdt=0,34",
+            "cluster_id": "14166809502744940433",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C34&cluster=14166809502744940433&engine=google_scholar&hl=en"
+          }
+        }
+      },
+      {
+        "position": 10,
+        "title": "Conceptual Analysis and Applications of Bigdata in Smart Society",
+        "result_id": "ni6nSMjZe18J",
+        "link": "https://link.springer.com/chapter/10.1007/978-981-19-2161-2_4",
+        "snippet": "Big data is a study that refers to dealing with datasets that are too substantial and complex for standard database software tools to handle. Big Data assists in representing data, …",
+        "publication_info": {
+          "summary": "JS Murthy, SS Chitlapalli - Society 5.0: Smart Future Towards Enhancing …, 2022 - Springer",
+          "authors": [
+            {
+              "name": "JS Murthy",
+              "link": "https://scholar.google.com/citations?user=DIJx__kAAAAJ&hl=en&oi=sra",
+              "author_id": "DIJx__kAAAAJ",
+              "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=DIJx__kAAAAJ&engine=google_scholar_author&hl=en"
+            },
+            {
+              "name": "SS Chitlapalli",
+              "link": "https://scholar.google.com/citations?user=YBY87NMAAAAJ&hl=en&oi=sra",
+              "author_id": "YBY87NMAAAAJ",
+              "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=YBY87NMAAAAJ&engine=google_scholar_author&hl=en"
+            }
+          ]
+        },
+        "inline_links": {
+          "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=ni6nSMjZe18J",
+          "cited_by": {
+            "total": 8,
+            "link": "https://scholar.google.com/scholar?cites=6880332309974167198&as_sdt=5,34&sciodt=0,34&hl=en",
+            "cites_id": "6880332309974167198",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C34&cites=6880332309974167198&engine=google_scholar&hl=en"
+          },
+          "related_pages_link": "https://scholar.google.com/scholar?q=related:ni6nSMjZe18J:scholar.google.com/&scioq=%22Jamuna+S+Murthy%22&hl=en&as_sdt=0,34",
+          "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C34&engine=google_scholar&hl=en&q=related%3Ani6nSMjZe18J%3Ascholar.google.com%2F",
+          "versions": {
+            "total": 3,
+            "link": "https://scholar.google.com/scholar?cluster=6880332309974167198&hl=en&as_sdt=0,34",
+            "cluster_id": "6880332309974167198",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C34&cluster=6880332309974167198&engine=google_scholar&hl=en"
+          }
+        }
+      }
+    ],
+    "pagination": {
+      "current": 1,
+      "next": "https://scholar.google.com/scholar?start=10&q=%22Jamuna+S+Murthy%22&hl=en&as_sdt=0,34",
+      "other_pages": {
+        "2": "https://scholar.google.com/scholar?start=10&q=%22Jamuna+S+Murthy%22&hl=en&as_sdt=0,34",
+        "3": "https://scholar.google.com/scholar?start=20&q=%22Jamuna+S+Murthy%22&hl=en&as_sdt=0,34",
+        "4": "https://scholar.google.com/scholar?start=30&q=%22Jamuna+S+Murthy%22&hl=en&as_sdt=0,34",
+        "5": "https://scholar.google.com/scholar?start=40&q=%22Jamuna+S+Murthy%22&hl=en&as_sdt=0,34"
+      }
+    },
+    "serpapi_pagination": {
+      "current": 1,
+      "next_link": "https://serpapi.com/search.json?as_sdt=0%2C34&engine=google_scholar&hl=en&q=%22Jamuna+S+Murthy%22&start=10",
+      "next": "https://serpapi.com/search.json?as_sdt=0%2C34&engine=google_scholar&hl=en&q=%22Jamuna+S+Murthy%22&start=10",
+      "other_pages": {
+        "2": "https://serpapi.com/search.json?as_sdt=0%2C34&engine=google_scholar&hl=en&q=%22Jamuna+S+Murthy%22&start=10",
+        "3": "https://serpapi.com/search.json?as_sdt=0%2C34&engine=google_scholar&hl=en&q=%22Jamuna+S+Murthy%22&start=20",
+        "4": "https://serpapi.com/search.json?as_sdt=0%2C34&engine=google_scholar&hl=en&q=%22Jamuna+S+Murthy%22&start=30",
+        "5": "https://serpapi.com/search.json?as_sdt=0%2C34&engine=google_scholar&hl=en&q=%22Jamuna+S+Murthy%22&start=40"
+      }
+    }
+  }
