@@ -5,6 +5,12 @@ import re
 from pathlib import Path
 
 try:
+    from dotenv import load_dotenv
+    load_dotenv()  # Load environment variables from .env file
+except ImportError:
+    pass  # dotenv is optional, environment variables can be set directly
+
+try:
     from ddgs import DDGS  # new package name
 except Exception:  # fallback if not installed yet
     from duckduckgo_search import DDGS
@@ -18,9 +24,9 @@ from langchain_core.embeddings import Embeddings
 # ==============================================================
 #  CONFIG
 # ==============================================================
-GROQ_API_KEY = os.getenv("GROQ_API_KEY", "").strip()
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 if not GROQ_API_KEY:
-    raise RuntimeError("Missing GROQ_API_KEY environment variable.")
+    raise RuntimeError("Missing GROQ_API_KEY environment variable. Please set it in your .env file or environment.")
 
 DB_DIR = "vector_db_v2"
 SOURCE_DIR = "extractor-2"
@@ -131,6 +137,34 @@ PROMPT = PromptTemplate(template=prompt_template, input_variables=["context", "q
 def format_docs(docs):
     return "\n\n".join(doc.page_content for doc in docs)
 
+def _estimate_tokens(text: str) -> int:
+    """Rough estimation: 1 token ≈ 4 characters for English text."""
+    return len(text) // 4
+
+def _truncate_context_for_llm(context: str, max_tokens: int = 4000) -> str:
+    """
+    Truncate context to stay within token limits.
+    Keeps as much as possible while staying under max_tokens.
+    max_tokens defaults to 4000 to leave room for prompt/question (6000 TPM limit).
+    """
+    estimated_tokens = _estimate_tokens(context)
+    if estimated_tokens <= max_tokens:
+        return context
+    
+    # Binary search for the right truncation point
+    max_chars = max_tokens * 4  # Convert tokens to approximate characters
+    if len(context) <= max_chars:
+        return context
+    
+    # Truncate at a reasonable boundary (try to cut at document boundaries)
+    truncated = context[:max_chars]
+    # Try to find a good break point (end of document separator)
+    last_sep = truncated.rfind("\n\n")
+    if last_sep > max_chars * 0.8:  # Only use it if we're not cutting too much
+        truncated = truncated[:last_sep]
+    
+    return truncated + "\n\n[Context truncated due to length limits...]"
+
 # ==============================================================
 #  FACULTY LOOKUP
 # ==============================================================
@@ -203,7 +237,7 @@ def _extract_name_hints(text: str):
             cleaned_hints.append(hint)
     return cleaned_hints
 
-def retrieve_documents(question: str, k: int = 6):
+def retrieve_documents(question: str, k: int = 1000):
     matches = _match_faculties(question)
     name_hints = _extract_name_hints(question)
     docs = []
@@ -219,7 +253,7 @@ def retrieve_documents(question: str, k: int = 6):
                 if rec_id not in seen_ids:
                     seen_ids.add(rec_id)
                     faculty_docs.append(doc)
-            raw_dump = get_vectordb().get(where=filter_kwargs, limit=500)
+            raw_dump = get_vectordb().get(where=filter_kwargs, limit=10000)
             for doc_text, meta in zip(raw_dump.get("documents", []), raw_dump.get("metadatas", [])):
                 rec_id = meta.get("citation_id") or meta.get("title") or doc_text
                 if rec_id in seen_ids:
@@ -239,18 +273,26 @@ def retrieve_documents(question: str, k: int = 6):
                     cited_val = -1
                 return (year_val, cited_val)
             faculty_docs.sort(key=sort_key, reverse=True)
-            docs.extend(faculty_docs[:k])
+            docs.extend(faculty_docs)
     if not docs:
         docs = get_vectordb().similarity_search(question, k=k)
     return docs, matches, name_hints
 
-def rag_answer(question: str, k: int = 6):
+def rag_answer(question: str, k: int = 1000, max_context_tokens: int = 4000):
+    """
+    RAG answer with intelligent context truncation.
+    Retrieves up to k documents but limits context sent to LLM to max_context_tokens.
+    All documents are still returned for display purposes.
+    """
     docs, matches, name_hints = retrieve_documents(question, k=k)
-    context = format_docs(docs)
-    prompt_value = PROMPT.format_prompt(context=context, question=question)
+    full_context = format_docs(docs)
+    # Truncate context for LLM while keeping full context for display
+    context_for_llm = _truncate_context_for_llm(full_context, max_tokens=max_context_tokens)
+    prompt_value = PROMPT.format_prompt(context=context_for_llm, question=question)
     ai_message = llm.invoke(prompt_value.to_messages())
     response_text = getattr(ai_message, "content", ai_message)
-    return response_text, docs, context, matches, name_hints
+    # Return full context for display, but LLM only saw truncated version
+    return response_text, docs, full_context, matches, name_hints
 
 # ==============================================================
 #  DUCKDUCKGO FALLBACK
@@ -263,7 +305,7 @@ def _contains_hint(record, hints):
     ]).lower()
     return any(h.lower() in text for h in hints)
 
-def web_search(query, num_results=5, hints=None):
+def web_search(query, num_results=10, hints=None):
     hints = hints or []
     # Primary attempt
     try:
@@ -332,7 +374,7 @@ def _is_weak_answer(text: str) -> bool:
 def _build_vector_references(docs):
     vector_lines = []
     records = []
-    for idx, doc in enumerate(docs[:8], start=1):
+    for idx, doc in enumerate(docs, start=1):
         meta = doc.metadata or {}
         title = meta.get("title") or (doc.page_content.splitlines()[0][:120] if doc.page_content else "Untitled")
         authors = meta.get("authors", "").strip()
@@ -357,7 +399,7 @@ def _build_vector_references(docs):
 def _build_web_references(results):
     web_lines = []
     records = []
-    for idx, result in enumerate((results or [])[:8], start=1):
+    for idx, result in enumerate((results or []), start=1):
         title = result.get("title", "Untitled")
         body = result.get("body", "")
         href = result.get("href", "")
@@ -376,10 +418,11 @@ def agentic_answer(
     query: str,
     *,
     use_web: bool = True,
-    web_k: int = 8,
-    vector_k: int = 6,
+    web_k: int = 20,
+    vector_k: int = 50,
+    max_context_tokens: int = 4000,
 ) -> dict:
-    _, docs, context, matches, name_hints = rag_answer(query, k=vector_k)
+    _, docs, context, matches, name_hints = rag_answer(query, k=vector_k, max_context_tokens=max_context_tokens)
     all_hints = matches + [hint for hint in name_hints if hint not in matches]
 
     web_results = []
@@ -408,7 +451,7 @@ def agentic_answer(
             f'"R C A Naidu" cloud site:semanticscholar.org',
         ]
         for sq in site_queries:
-            more = web_search(sq, num_results=10)
+            more = web_search(sq, num_results=100)
             filtered = [r for r in more if is_allowed(r.get("href", ""))]
             if filtered:
                 chosen_results = filtered
@@ -439,15 +482,22 @@ def agentic_answer(
     vector_block, vector_meta = _build_vector_references(docs)
     web_block, web_meta = _build_web_references(chosen_results if use_web else [])
 
+    # Truncate context and references to stay within token limits
+    # Reserve ~1000 tokens for prompt/question, use ~2000 for vector context, ~1000 for references
+    truncated_context = _truncate_context_for_llm(context or "None", max_tokens=2000)
+    # Also truncate reference blocks if too long
+    truncated_vector_block = _truncate_context_for_llm(vector_block, max_tokens=800)
+    truncated_web_block = _truncate_context_for_llm(web_block, max_tokens=800)
+    
     synth_prompt = (
         "You are a scholarly assistant synthesizing research insights.\n"
         "Craft a detailed answer (2 short paragraphs plus bullet points if appropriate) using BOTH the vector context and web evidence below.\n"
         "Always cite facts with [V#] for vector documents and [W#] for web results. If only one source type is available, say so explicitly.\n"
         "Finish with a 'Sources:' section listing only the items you cited.\n\n"
         f"Question:\n{query}\n\n"
-        f"Vector context excerpts:\n{context or 'None'}\n\n"
-        f"Vector references:\n{vector_block}\n\n"
-        f"Web references:\n{web_block}\n"
+        f"Vector context excerpts:\n{truncated_context}\n\n"
+        f"Vector references:\n{truncated_vector_block}\n\n"
+        f"Web references:\n{truncated_web_block}\n"
     )
 
     response = llm.invoke([HumanMessage(content=synth_prompt)]).content
@@ -473,7 +523,6 @@ def run_streamlit_app():
     except Exception as exc:
         raise RuntimeError("Streamlit is required to run the UI. Install with `pip install streamlit`.") from exc
 
-    st.set_page_config(page_title="Scholarly RAG Assistant", page_icon="📚", layout="wide")
     st.title("📚 Scholarly RAG Assistant")
     st.write(
         "Ask research-focused questions to retrieve answers synthesized from both the local scholarly vector store and live web evidence."
@@ -481,7 +530,7 @@ def run_streamlit_app():
 
     with st.sidebar:
         st.header("How it works")
-        st.markdown(
+        st.markdown(    
             "- Retrieves relevant documents from the Chroma vector database.\n"
             "- Optionally searches the web (DuckDuckGo) for recent scholarly evidence.\n"
             "- Combines both sources through the Groq LLM, citing vector items as `[V#]` and web items as `[W#]`."
@@ -496,18 +545,18 @@ def run_streamlit_app():
         vector_k = st.slider(
             "Vector matches",
             min_value=2,
-            max_value=10,
-            value=6,
-            help="Number of top vector documents to retrieve before synthesis.",
+            max_value=1000,
+            value=50,
+            help="Number of top vector documents to retrieve. Context is automatically truncated to stay within token limits. All retrieved documents are shown in results.",
         )
         web_k = 0
         if not fast_mode:
             web_k = st.slider(
                 "Web results",
                 min_value=3,
-                max_value=10,
-                value=6,
-                help="Higher values improve coverage but increase latency.",
+                max_value=100,
+                value=20,
+                help="Number of web search results to retrieve and display.",
             )
         use_web = not fast_mode
 
@@ -518,10 +567,13 @@ def run_streamlit_app():
         placeholder="e.g., Summarize 2022-2024 cloud security work by Dr. S. Rajarajeswari with citations",
     )
 
-    if st.button("Run query", type="primary", use_container_width=True, disabled=not query.strip()):
+    query_text = query.strip() if query else ""
+    button_clicked = st.button("Run query", type="primary", use_container_width=True, disabled=not query_text)
+
+    if button_clicked and query_text:
         with st.spinner("Running hybrid retrieval and synthesis..."):
             result = agentic_answer(
-                query.strip(),
+                query_text,
                 use_web=use_web,
                 web_k=web_k,
                 vector_k=vector_k,
